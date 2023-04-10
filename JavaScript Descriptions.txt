@@ -1,0 +1,15 @@
+JavaScript is a widely used scripting language on the internet.
+Recognized and works in all major browsers
+Designed to add interactivity and functionality to the Web site.
+
+
+Types of JavaScript Output
+
+window.alert( );
+-The alert( ) method displays an alert box with a specified message and an OK button.
+
+document.write( );
+--The write( ) method writes HTML expressions or JavaScript code to a document.
+
+innerHTML = â€œ â€;
+-The innerHTML property sets or returns the HTML content (inner HTML) of an element.It can be combined with document.getElementById.
