@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&display=swap" rel="stylesheet">
+	<title>Q4 Exercise 5</title>
+	<style type="text/css">
+		#figure1,#figure2{
+			width: 500px;
+		}
+		h1{
+			font-family: Lobster;
+			background-color: darkolivegreen; color: white;
+		}
+		p{
+			font-family: Chakra Petch;
+		}
+		h3{
+			font-family: Roboto Condensed;
+		}
+		body{
+			background: #C9FAD4;
+		}
+	</style>
+</head>
+<body>
+<div class="container">
+	<h1 align="center" text-container>⚖️ The Ohm's Law ⚖️</h1>
+	<h3>DID YOU KNOW? 💭</h3>
+	<p>Ohm's Law describes <u><b>the way current flows</u></b> through a material when different levels of voltage are applied. Some materials like <u><b>electrical wires</u></b> present little resistance to the current flow and this type of material is called a <u><b>conductor</u></b>. Hence if this conductor is placed directly across a battery for example, a lot of current would flow.</p>
+	<br>
+	<center><img src="https://www.electronics-notes.com/images/ohms-law-circuit-illustration-01.svg" class="img-thumbnail"></center>
+	<br>
+	<br>
+	<h3>WHAT WAS OHM'S DISCOVERY? 🧑🏻‍💻</h3>
+	<p>Ohm’s principal discovery was that the amount of electric current through a metal conductor in a circuit is directly proportional to the voltage impressed across it, for any given temperature. Ohm expressed his discovery in the form of <b><u>a simple equation</u></b>, describing how <b><i>voltage</i></b>, <b><i>current</i></b>, and <b><i>resistance</i></b> interrelate: <u>Voltage [E]</u> = <u>Current [I]</u> <b>x</b> <u>Resistance [R]</u></p>
+	<br>
+	<br>
+	<center><img src="fig1.PNG" id="figure1" class="img-thumbnail"></center>
+	<br>
+	<br>
+	<h3>HOW TO CALCULATE FOR THE CURRENT? 🧮</h3>
+	<p>Calculate the <i>amount</i> of <b>current [I]</b> in a circuit, given <i>values</i> of <b>voltage (E)</b> and <b>resistance [R]</b>:</p>
+	<br>
+	<div class="row text-center">
+		<div class="col-6 mt-5">
+			Enter <u>Voltage</u> <b>[E]</b>: <input type="text" id="V" class="form-control"><br>
+			Enter <u>Resistance</u> <b>[R]</b>: <input type="text" id="R" class="form-control"><br>
+			<input type="Submit" value="COMPUTE" class="btn btn-primary" onclick="Calculate()">
+			<p id="OUTPUT"></p>
+		</div>
+	<div class="col-6">
+	        <center><img src="https://www.allaboutcircuits.com/uploads/articles/current-flow-ER.jpg" id="figure2" class="img-thumbnail"></center></div>
+	</div>
+	</div>
+	<br>
+	<audio id="audio1" src="turnonlights.mp3"></audio>
+		<p><u>When a light bulb connects to an electrical power supply</u>,<i> an electrical current flows from one metal contact to the other</i>. As the current travels through the wires and the filament, <b>the filament heats up</b> to the point where it begins to emit photons, which are small packets of <b>visible light</b>.</p>
+		<center><button class="btn btn-warning" onmouseover="On()" onmouseout="Off()"><b><i><u>TURN ON LIGHT</b></i></u></button></center>
+		<center><img src="switchOFF.PNG" id="bulb" width="250" height="300"></center>
+
+
+		<script type="text/javascript">
+			function Calculate (){
+				let V = document.getElementById('V').value;
+				let R = document.getElementById('R').value;
+				let Current = V/R;
+				document.getElementById('OUTPUT').innerHTML = "The computed value of the Current [I] is:" + Current;
+			}
+			function On() {document.getElementById('bulb').src ="switchON.PNG";
+			document.getElementById('audio1').play();
+			}
+			function Off() {document.getElementById('bulb').src ="switchOFF.PNG";
+			document.getElementById('audio1').pause();
+			}
+
+		</script>
+
+<br><b><i>SOURCES</b></i>: 
+<br>
+<a href="https://www.electronics-notes.com/articles/basic_concepts/resistance/what-is-ohms-law-formula-equation.php">💡 Understanding Ohm's Law</a>
+<br>
+<a href="https://www.allaboutcircuits.com/textbook/direct-current/chpt-2/voltage-current-resistance-relate/"> 💡 Ohm's Law - How Voltage, Current and Resistance Relate</a>
+<br>
+<a href="https://www.wonderopolis.org/wonder/what-makes-a-light-bulb-light-up">💡 What Makes a Light Bulb Light Up?</a>
+</div>
+</body>
+</html>
